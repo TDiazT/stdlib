@@ -396,7 +396,7 @@ Section MakeRingPol.
        its corresponds to (PX P1 i ...)]
  *)
 
-  Inductive Mon: Type :=
+  Inductive Mon: Set :=
   | mon0: Mon
   | zmon: positive -> Mon -> Mon
   | vmon: positive -> Mon -> Mon.

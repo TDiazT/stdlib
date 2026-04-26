@@ -27,7 +27,7 @@ Delimit Scope Int_scope with I.
 
 Module Type Int.
 
-  Parameter t : Type.
+  Parameter t : Set.
   Bind Scope Int_scope with t.
 
   Parameter i2z : t -> Z.
@@ -193,7 +193,7 @@ Module MoreInt (Import I:Int).
     | _ => idtac
    end.
 
-  Inductive ExprI : Type :=
+  Inductive ExprI : Set :=
     | EI0 : ExprI
     | EI1 : ExprI
     | EI2 : ExprI
@@ -205,7 +205,7 @@ Module MoreInt (Import I:Int).
     | EImax : ExprI -> ExprI -> ExprI
     | EIraw : int -> ExprI.
 
-  Inductive ExprZ : Type :=
+  Inductive ExprZ : Set :=
     | EZadd : ExprZ -> ExprZ -> ExprZ
     | EZopp : ExprZ -> ExprZ
     | EZsub : ExprZ -> ExprZ -> ExprZ
