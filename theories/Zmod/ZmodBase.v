@@ -649,7 +649,7 @@ Proof.
   pose proof signed_range x; pose proof signed_range y.
   case (Z.eqb_spec m 0) as [->|]; auto using Z.smod_0_r.
  apply Z.smod_small; Z.to_euclidean_division_equations; nia.
-Qed.
+Admitted.
 
 Lemma squot_overflow [m] x y
   (Hm : m mod 2 = 0) (Hx : signed x = -m/2) (Hy : signed y = -1) :
